@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/books/book-index.css' %}"
+/>
+{% endblock %} {% block content %}
+
+<section class="page-header">
+  <img
+  src="{% static '' %}"
+  alt="A rare book"
+/>
+  <h1>Wishlist</h1>
+  <img
+    src="{% static '' %}"
+    alt="A rare book"
+  />
+  
+</section>
+
+<section class="card-container">
+  {% for book in books %}
+  <div class="card">
+    <div class="card-content">
+      <div class="card-img-container">
+        <img
+          src="{% static '' %}"
+          alt="book 2"
+        />
+      </div>
+      <h2 class="card-title">{{ book.title }}</h2>
+      <p> {{ book.author }}</p>
+      <p><small>{{ book.genre}}</small></p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
