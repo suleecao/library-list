@@ -18,7 +18,11 @@
   <h1>{{ book.title }}</h1>
   <h3>Author: {{ book.author }}</h3>
   <p>Genre: {{ book.genre }}</p>
-  <form method="post" action="{% url 'mark_read' book.id %}">
+  
+  <div class='book-actions'>
+    <a href="{% url 'book-update' book.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'book-delete' book.id %}" class="btn danger">Delete</a>
+  </div>
     {% csrf_token %}
     <label>
         <input type="checkbox" name="has_read" {% if is_read %}checked{% endif %} onchange="this.form.submit()">

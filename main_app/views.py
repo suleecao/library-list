@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Book
 
 def home(request):
@@ -26,5 +26,15 @@ class BookCreate(CreateView):
     model = Book
     fields = ['title', 'author', 'genre', 'is_Read']
     template_name = 'books/book_form.html'
+
+class BookUpdate(UpdateView):
+    model = Book
+    fields = ['title', 'author', 'genre', 'is_Read']
+    template_name = 'books/book_form.html'
+
+class BookDelete(DeleteView):
+    model = Book
+    # template_name = 'books/book_confirm_delete.html'
+    success_url = '/wishlist/'
     
     

@@ -8,9 +8,7 @@ urlpatterns = [
     path('wishlist/<int:book_id>/', views.book_detail, name='book_detail'),
     path('wishlist/<int:book_id>/mark_read/', views.mark_read, name='mark_read'),
     path('wishlist/create/', views.BookCreate.as_view(), name='book-create'),
+    path('wishlist/<int:pk>/update/', views.BookUpdate.as_view(), name='book-update'),
+    path('wishlist/<int:pk>/delete/', views.BookDelete.as_view(), name='book-delete'),
 
 ]
-#     path('books/', views.book_list, name='book_list'),
-#     path('books/<int:book_id>/', views.book_detail, name='book_detail'),
-#     path('authors/', views.author_list, name='author_list'),
-#     path('authors/<int:author_id>/', views.author_detail, name='author_detail'),
