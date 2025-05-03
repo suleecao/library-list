@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 class Book(models.Model):
     title = models.CharField(max_length=200)
@@ -12,3 +13,19 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         return reverse('book_detail', kwargs={'book_id': self.id})
+    
+
+
+class UserBook(models.Model):
+    date = models.DateField("date finished")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    is_read = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = ('user', 'book')  
+
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='user_books')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.book.title} {self.date} { self.is_read}"
