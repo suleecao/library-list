@@ -25,8 +25,9 @@
       </div>
       <nav id="navbar">
         <ul>
-          <li><a href="/wishlist">Wishlist</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+          <li><a href="{% url 'book-create' %}">Add New Book</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li><a href='/admin'>Admin</a></li>
         </ul>
       </nav>

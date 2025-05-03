@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Book
 
 def home(request):
@@ -20,3 +21,10 @@ def mark_read(request, book_id):
     book.is_Read = True
     book.save()
     return render(request, 'books/detail.html', {'book': book})
+
+class BookCreate(CreateView):
+    model = Book
+    fields = ['title', 'author', 'genre', 'is_Read']
+    template_name = 'books/book_form.html'
+    
+    

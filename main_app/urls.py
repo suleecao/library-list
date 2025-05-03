@@ -7,6 +7,8 @@ urlpatterns = [
     path('wishlist/', views.wishlist, name='wishlist'),
     path('wishlist/<int:book_id>/', views.book_detail, name='book_detail'),
     path('wishlist/<int:book_id>/mark_read/', views.mark_read, name='mark_read'),
+    path('wishlist/create/', views.BookCreate.as_view(), name='book-create'),
+
 ]
 #     path('books/', views.book_list, name='book_list'),
 #     path('books/<int:book_id>/', views.book_detail, name='book_detail'),
