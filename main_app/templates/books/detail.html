@@ -30,5 +30,18 @@
     </label>
 </form>
 </div>
+<div class="finished-reading">
+  <h2>Finished Reading</h2>
+<form method="post" class="subsection-content" autocomplete="off">
+    {% csrf_token %} 
+    {{ userbook_form.as_p }}
+    <button type="submit" class="btn submit">Add Finish Date</button>
+  </form>
+  {% if userbook and userbook.is_read %}
+    <p>Finished reading on: {{ userbook.date }}</p>
+  {% else %}
+    <p>You haven't finished this book yet.</p>
+  {% endif %}
+</div>
 </section>
 {% endblock %}

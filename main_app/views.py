@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Book
+from .models import Book, UserBook
+from .forms import UserBookForm
 
 def home(request):
     return render(request, 'home.html')
@@ -14,7 +15,12 @@ def wishlist(request):
 
 def book_detail(request, book_id):
     book = Book.objects.get(id=book_id)
-    return render(request, 'books/detail.html', {'book': book})
+    userbook_form = UserBookForm()
+    # userbook = UserBook.objects.filter(user=request.user, book=book).first()  # or use get() if guaranteed to exist
+
+    return render(request, 'books/detail.html',{''
+        'book' : book,
+        'userbook_form' : userbook_form})
 
 def mark_read(request, book_id):
     book = Book.objects.get(id=book_id)
