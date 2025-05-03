@@ -6,7 +6,11 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Add book to wishlist</h1>
+  {% if book %}
+    <h1>Edit wishlist</h1>
+  {% else %}
+    <h1>Add to wishlist</h1>
+  {% endif %}
     <img src="{% static '' %}" alt="picture" />
 </div>
 <form action="" method="post" class="form-container">

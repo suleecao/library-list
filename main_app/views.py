@@ -34,7 +34,7 @@ class BookUpdate(UpdateView):
 
 class BookDelete(DeleteView):
     model = Book
-    # template_name = 'books/book_confirm_delete.html'
+    template_name = 'books/book_confirm_delete.html'
     success_url = '/wishlist/'
     
     
