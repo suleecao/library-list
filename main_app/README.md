@@ -5,7 +5,7 @@
 ![LL logo](/main_app/static/images/bag1.jpg)
 
 ### Overview
-This app gives users the ability to track library book in a wishlist form. It also lets users mark the date finished if applicable. Users can create, read, update, and delete books from their wishlist.
+This app gives users the ability to track library book in a wishlist form. It also lets users mark the date finished if applicable. Users can create, read, update, and delete books from their wishlist. Users are also able to rate a book from 0-5 stars in the edit page.
 
 ### Link to Deployed App
 Heroku stuff here

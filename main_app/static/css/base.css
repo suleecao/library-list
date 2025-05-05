@@ -96,12 +96,6 @@ nav li {
     top: -100px;
   }
 
-/* .header-logo-container {
-    margin: auto;
-    padding: 10px 20px 0;
-    max-width: 500px;
-} */
-
 .page-header {
     display: flex;
     align-items: center;
@@ -263,11 +257,14 @@ nav li {
             backdrop-filter: none;
         }
 
-        nav,
-        .header-logo-container {
-            background: rgba(218, 145, 235, 0.6);
+        nav {
+            background: rgba(242, 180, 254, 0.777);
             -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
+        }
+        .header-logo-container {
+            background: rgba(211, 234, 249)
+            
         }
     }
 }

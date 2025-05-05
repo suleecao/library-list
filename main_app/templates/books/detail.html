@@ -25,7 +25,11 @@
   </div>
     {% csrf_token %}
     {% for val, label in star_choices %}  {{ val }}★ {% endfor %}
-    Your Rating: {{ book.rating }}
+   <p> Your Rating: {{ book.rating }} {% if book.rating == 1 %}star
+    {% elif book.rating > 1 %}stars
+      {% else %}
+      No rating yet!</p>
+      {% endif %}
   </div>
   <div class="finished-reading">
   <h2>Finished Reading</h2>
