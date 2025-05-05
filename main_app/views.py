@@ -13,7 +13,7 @@ def wishlist(request):
     books = Book.objects.all()
     return render(request, 'books/wishlist.html', {'books': books})
 
-# STAR_CHOICES = [(i, f"{i} star{'s' if i != 1 else ''}") for i in range(6)]
+STAR_CHOICES = [(i, f"{i} star{'s' if i != 1 else ''}") for i in range(6)]
 
 def book_detail(request, book_id):
     book = get_object_or_404(Book, id=book_id)
@@ -26,7 +26,8 @@ def book_detail(request, book_id):
 
     return render(request, "books/detail.html", {
         "book": book,
-        # "star_choices": STAR_CHOICES,
+        "star_choices": STAR_CHOICES,
+        "rating": book.rating
     })
 
 

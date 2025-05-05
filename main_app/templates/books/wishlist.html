@@ -21,13 +21,14 @@
     <div class="card-content">
       <div class="card-img-container">
         <img
+          class="book_cover"
           src="{% static 'images/round2.jpg' %}"
           alt="BV round tray"
         />
       </div>
-      <h2 class="card-title">{{ book.title }}</h2>
+      <span><h2 class="card-title">{{ book.title }}</h2>
       <p> {{ book.author }}</p>
-      <p><small>{{ book.genre}}</small></p>
+      <p><small>{{ book.genre}}</small></p></span>
     </div>
   </a>
   </div>

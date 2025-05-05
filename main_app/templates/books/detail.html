@@ -25,7 +25,7 @@
   </div>
     {% csrf_token %}
     {% for val, label in star_choices %}  {{ val }}★ {% endfor %}
-    Your Rating: {{ val }}
+    Your Rating: {{ book.rating }}
   </div>
   <div class="finished-reading">
   <h2>Finished Reading</h2>
