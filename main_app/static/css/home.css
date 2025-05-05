@@ -15,9 +15,9 @@ main {
     flex-direction: column;
   }
   
-  .header-logo-container {
+  /* .header-logo-container {
     display: none;
-  }
+  } */
   
   .logo-container {
     max-width: 375px;

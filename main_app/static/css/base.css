@@ -96,11 +96,11 @@ nav li {
     top: -100px;
   }
 
-.header-logo-container {
+/* .header-logo-container {
     margin: auto;
     padding: 10px 20px 0;
     max-width: 500px;
-}
+} */
 
 .page-header {
     display: flex;

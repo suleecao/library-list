@@ -3,15 +3,15 @@
 {% block head %}
 <link
   rel="stylesheet"
-  href="{% static 'css/wishlist/book-detail.css' %}">
+  href="{% static 'css/books/book-detail.css' %}">
 {% endblock %}
 
 {% block content %}
 <section class="book-container">
     <div class="book-img-container">
         <img
-        src="{% static '' %}"
-        alt="book 2"
+        src="{% static 'images/round2.jpg' %}"
+        alt="BV round tray"
         /> 
     </div>
   <div class="book-details">
@@ -24,15 +24,16 @@
     <a href="{% url 'book-delete' book.id %}" class="btn danger">Delete</a>
   </div>
     {% csrf_token %}
-    <label>
-        <input type="checkbox" name="has_read" {% if is_read %}checked{% endif %} onchange="this.form.submit()">
-        Mark as read
-    </label>
-</form>
-</div>
-<div class="finished-reading">
+    {% for val, label in star_choices %}  {{ val }}★ {% endfor %}
+    Your Rating: {{ val }}
+  </div>
+  <div class="finished-reading">
   <h2>Finished Reading</h2>
-<form method="post" class="subsection-content" autocomplete="off">
+  <form action="{% url 'add_userbook' user.id%}"
+      method="post" 
+      class="subsection-content" 
+      autocomplete="off"
+  >
     {% csrf_token %} 
     {{ userbook_form.as_p }}
     <button type="submit" class="btn submit">Add Finish Date</button>

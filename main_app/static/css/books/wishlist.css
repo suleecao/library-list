@@ -6,7 +6,7 @@
   }
   
   .card {
-    width: 275px;
+    width: 290px;
     margin: 10px;
     border: var(--borders);
     box-shadow: var(--card-box-shadow);
@@ -20,11 +20,12 @@
   
   .card-content {
     padding: 10px;
-    width: 100%;
+    width: 90%;
   }
   
   .usr-img {
     width: 100%;
+    justify-content: center;
     border-radius: var(--card-border-radius);
   }
   
