@@ -25,7 +25,7 @@ class UserBook(models.Model):
     date = models.DateField("date finished")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
-    is_read = models.BooleanField(default=False)
+    recommend  = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('user', 'book')  
@@ -33,4 +33,4 @@ class UserBook(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='user_books')
 
     def __str__(self):
-        return f"{self.user.username} - {self.book.title} {self.date} { self.is_read}"
+        return f"{self.user.username} - {self.book.title} {self.date} { self.recommend}"

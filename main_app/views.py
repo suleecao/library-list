@@ -48,17 +48,7 @@ def add_userbook(request, book_id):
     else:
         return render(request, 'books/detail.html', {'book': book, 'userbook_form': form})
 
-# def add_userbook(request, book_id):
-#     form = UserBookForm(request.POST)
-#     book = Book.objects.get(id=book_id)
-#     if form.is_valid():
-#         userbook = form.save(commit=False)
-#         userbook.user = request.user
-#         userbook.book = book
-#         userbook.save()
-#         return redirect(request, 'books/detail.html', {'userbook': userbook})
-#     else:
-#         return render(request, 'books/detail.html', {'book': book})
+
 
 class BookCreate(CreateView):
     model = Book
@@ -69,6 +59,7 @@ class BookUpdate(UpdateView):
     model = Book
     fields = ['title', 'author', 'genre', 'rating']
     template_name = 'books/book_form.html'
+    # TODO: put calendar here instead of in book details
 
 class BookDelete(DeleteView):
     model = Book

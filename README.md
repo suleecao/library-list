@@ -9,7 +9,8 @@ This app gives users the ability to track library book in a wishlist form. It al
 TODO: Heroku stuff
 
 ### Planning Materials
-Trello, ERD
+* Kanban board created with Trello, ERD with form.io
+* [Trello](https://trello.com/b/IR12BAwQ/djangoproject4)
 
 ### Tech Stack
 * Framework: Django
@@ -19,7 +20,6 @@ Trello, ERD
 ### Stretch Goals
 Add other forms of media to track, like ebooks, or videos. Use tags to categorize these items in addition to books.
 
-TODO: finish planning and deployment materials.
 
 
 

@@ -4,8 +4,8 @@ from .models import UserBook
 class UserBookForm(forms.ModelForm):
     class Meta:
         model = UserBook
-        fields = ['date', 'is_read']
+        fields = ['date', 'recommend']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'}),
-            'is_read': forms.CheckboxInput(),
+            'recommend': forms.CheckboxInput(),
         }
