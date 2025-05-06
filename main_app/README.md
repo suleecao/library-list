@@ -1,29 +1,25 @@
-
-
 ## Library List
 
 ![LL logo](/main_app/static/images/bag1.jpg)
 
 ### Overview
-This app gives users the ability to track library book in a wishlist form. It also lets users mark the date finished if applicable. Users can create, read, update, and delete books from their wishlist. Users are also able to rate a book from 0-5 stars in the edit page.
+This app gives users the ability to track library book in a wishlist form. It also lets users mark the date finished, if applicable. Users can create, read, update, and delete books from their wishlist. Users are also able to rate a book from 0-5 stars in the edit page. The app has a arty and eclectic theme with images of drawings from op art pioneer Bridget Riley, Brazilian mid-century modern design, and contemporary luxury fashion. Django's built in authentication handles login/logout and sign up.
 
 ### Link to Deployed App
-Heroku stuff here
+TODO: Heroku stuff
 
 ### Planning Materials
-like Trello, ERD
+Trello, ERD
 
 ### Tech Stack
-Built using Django, DTL, HTML, CSS and a little Javascript for handling the movement of the nav bar.
+* Framework: Django
+* Tech stack: Python, HTML, CSS and a little Javascript for handling the movement of the nav bar
+* Database: PostgreSQL
 
 ### Stretch Goals
 Add other forms of media to track, like ebooks, or videos. Use tags to categorize these items in addition to books.
 
+TODO: finish planning and deployment materials.
 
 
 
-
-
-Your app’s name: Include a description of your app and its functionality. Background info about the app and why you built it is a nice touch.
-
-Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
