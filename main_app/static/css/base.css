@@ -158,6 +158,25 @@ nav li {
     font-size: var(--font-reg);
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;     
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    background: #333;
+    color: #e9b8b8;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0.7;
+    z-index: 1000;
+  }
+  #back-to-top:hover {
+    opacity: 1;
+  }
+
 @media only screen and (min-width: 768px) {
     header {
         position: sticky;

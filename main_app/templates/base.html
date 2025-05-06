@@ -11,12 +11,13 @@
     />
 
     <title>Library List</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'main_app/static/css/base.css' %}" />
 
     {% block head %} 
     {% endblock %}
   </head>
   <body>
+    <div id="top"></div>
     <header>
       <div class="header-logo-container">
         <a href="/">
@@ -37,6 +38,29 @@
      {% block content %} 
      {% endblock %}
      </main>
+     <button id="back-to-top" title="Back to top">↑</button>
+     <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        const btn = document.getElementById("back-to-top");
+      
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        });
+      
+        btn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      });
+      </script>
      <script src="{% static 'main_app/navbar.js' %}"></script>
   </body>
 </html>
+
+  
