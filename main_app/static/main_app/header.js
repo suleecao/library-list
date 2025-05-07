@@ -1,6 +1,6 @@
 const headerLogoContainer = document.querySelector('.header-logo-container');
 let lastScrollTop = 0;
-const scrollThreshold = 50; // Adjust this as neeced
+const scrollThreshold = 50;
 
 window.addEventListener('scroll', function() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
