@@ -1,9 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-    <h1>About Library Listsicles</h1>
+    <h1>About Library List</h1>
     <hr />
     <p>
-      Learn. Be curious. Read more. Build Stuff. Break stuff. Repeat.
+      “My design process never starts or finishes. I am always hoping to find something 
+      through the mere act of living my daily life. I do not work from a desk, and do not 
+      have an exact starting point for any collection. There is never a mood board, I do 
+      not go through fabric swatches, I do not sketch, there is no eureka moment, there 
+      is no end to the search for something new. As I live my normal life, I hope to find 
+      something that click starts a thought, and then something totally unrelated would 
+      arise, and then maybe a third unconnected element would come from nowhere. 
+      Often in each collection, there are three or so seeds of things that come together 
+      accidentally to form what appears to everyone else as a final product, but for me it 
+      is never ending. There is never a moment when I think, ‘this is working, this is clear.’ 
+      If for one second I think something is finished, the next thing would be impossible to do."
+      -Rei Kawakubo
     </p>
-  </body>
+    <hr />
+    <img
+    src="{% static 'images/BRsketch.png' %}"
+    alt="abstract black and white sketch"
+  />
 {% endblock %}
