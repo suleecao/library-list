@@ -33,13 +33,15 @@
   </div>
   <div class="finished-reading">
   <h2>Finished Reading</h2>
-  <form action="{% url 'add_userbook' user.id%}"
+  <form action="{% url 'add_userbook' book.id %}"
+      
       method="post" 
       class="subsection-content" 
       autocomplete="off"
   >
     {% csrf_token %} 
     {{ userbook_form.as_p }}
+    <input type="hidden" name="book_id" value="{{ book.id }}">
     <button type="submit" class="btn submit">Add Finish Date</button>
   </form>
   {% if userbook and userbook.recommend %}
@@ -50,20 +52,3 @@
 </div>
 </section>
 {% endblock %}
-
-
-{% comment %} <table>
-  <thead>
-    <tr>
-      <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for userbook  %}
-      <tr>
-        <td>{{.date}}</td>
-        <td>{{feeding.get_meal_display}}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table> {% endcomment %}

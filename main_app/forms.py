@@ -6,6 +6,11 @@ class UserBookForm(forms.ModelForm):
         model = UserBook
         fields = ['date', 'recommend']
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}),
-            'recommend': forms.CheckboxInput(),
+            'date': forms.DateInput(
+                format=('%Y-%m-%d'),
+                attrs={
+                    'placeholder': 'Select a date',
+                    'type': 'date'
+                }
+            ),
         }

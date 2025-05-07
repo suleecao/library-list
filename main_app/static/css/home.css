@@ -15,10 +15,6 @@ main {
     flex-direction: column;
   }
   
-  /* .header-logo-container {
-    display: none; 
-  } TODO: this removes the oval but the image is also gone
-   */
   .logo-container {
     max-width: 375px;
   }

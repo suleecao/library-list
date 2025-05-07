@@ -26,7 +26,6 @@ class Book(models.Model):
 class UserBook(models.Model):
     date = models.DateField("date finished")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
     recommend  = models.BooleanField(default=False)
 
     class Meta:
