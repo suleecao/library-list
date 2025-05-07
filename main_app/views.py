@@ -102,13 +102,19 @@ def add_finish_date(request, book_id):
         return render(request, 'books/detail.html', {'form': form, 'error_msg': 'Invalid form submission.'})
     
 
+class BookCreate(LoginRequiredMixin, CreateView):
+    model = Book
+    fields = ['title', 'author', 'genre', 'rating']
+    template_name = 'books/book_form.html'
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
     
 
 class BookUpdate(LoginRequiredMixin, UpdateView):
     model = Book
     fields = ['title', 'author', 'genre', 'rating']
     template_name = 'books/book_form.html'
-    # TODO: put calendar here instead of in book details
 
 class BookDelete(LoginRequiredMixin, DeleteView):
     model = Book
