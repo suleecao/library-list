@@ -6,7 +6,7 @@
 This app gives users the ability to track library book in a wishlist form. It also lets users mark the date finished, if applicable. Users can create, read, update, and delete books from their wishlist. Users are also able to rate a book from 0-5 stars in the edit page. The app has a arty and eclectic theme with images of drawings from op art pioneer Bridget Riley, Brazilian mid-century modern design, and contemporary luxury fashion. Django's built in authentication handles login/logout and sign up.
 
 ### Link to Deployed App
-TODO: Heroku stuff
+* [Heroku] (https://library-list-app-fe2bd390ee43.herokuapp.com)
 
 ### Planning Materials
 * Kanban board created with Trello, ERD with form.io
