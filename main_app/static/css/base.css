@@ -28,6 +28,18 @@ html {
     color: var(--link-hover-color);
   }
 
+.header-logo-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-logo-container.hidden {
+    transform: translateY(-100%);
+}
+
 body {
     background-color: rgb(211, 234, 249);
     margin: 0;
@@ -215,16 +227,14 @@ nav li {
         
 
     .header-logo-container {
-        padding-top: 1px;
-        /* height: 200px;
-        width: 200px; */
-       
+        padding-top: 3px;
+        
     }
 
     nav {
         margin-left: auto;
         display: flex;
-        justify-content: center;
+        justify-content: right;
     }
 
     nav ul {
@@ -285,9 +295,9 @@ nav li {
     }
 
     .header-logo-container {
-        padding-top: 6px;
-        width: 202px;
-        height: 202px;
+        padding-top: 30px;
+        width: 200px;
+        height: 200px;
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -307,4 +317,4 @@ nav li {
         }
     }
 }
-
+}
