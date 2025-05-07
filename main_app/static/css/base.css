@@ -12,6 +12,22 @@ html {
     font-size: 62.5%;
 }
 
+#logout-form button {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+  
+  #logout-form button:hover {
+    color: var(--link-hover-color);
+  }
+
 body {
     background-color: rgb(211, 234, 249);
     margin: 0;
@@ -28,8 +44,8 @@ body {
     --button-bg: rgb(245, 245, 245);
     --button-bg-hover: rgb(226, 226, 226);
     --submit: rgb(26, 128, 0);
-    --warn: rgb(255, 102, 0);
-    --danger: rgb(220, 20, 30);
+    --warn: rgb(239, 195, 167);
+    --danger: rgb(28, 25, 25);
     --secondary: rgb(57, 57, 57);
     --card-box-shadow: 5px 5px 6px -1px #aaa;
     --font-xtreme: 4.2rem;
@@ -121,6 +137,7 @@ nav li {
 .submit {
     color: var(--submit);
     border-color: var(--submit);
+    border-radius: 20px;
 }
 
 .secondary {
@@ -131,11 +148,13 @@ nav li {
 .warn {
     color: var(--warn);
     border-color: var(--warn);
+    border-radius: 20px;
 }
 
 .danger {
     color: var(--danger);
     border-color: var(--danger);
+    border-radius: 20px;
 }
 
 .page-header h1 {
@@ -193,10 +212,12 @@ nav li {
     .header-logo-container {
         margin: 10px 0;
         padding: 0 15px;
-    }
+        
 
     .header-logo-container {
-        padding-top: 3px;
+        padding-top: 1px;
+        /* height: 200px;
+        width: 200px; */
        
     }
 
@@ -211,7 +232,8 @@ nav li {
     }
 
     .header-logo-container {
-        width: 213px;
+        width: 210px;
+        height: 210px;
     }
 
     .page-header h1 {
@@ -264,8 +286,8 @@ nav li {
 
     .header-logo-container {
         padding-top: 6px;
-        width: 256px;
-        height: 35px;
+        width: 202px;
+        height: 202px;
     }
 
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -285,3 +307,4 @@ nav li {
         }
     }
 }
+
